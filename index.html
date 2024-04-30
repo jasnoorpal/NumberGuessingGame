@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background: linear-gradient(to right, #4e54c8, #8f94fb);
+        height: auto;
+        margin: 0;
+        background-attachment: fixed;
+      }
+
+      h1 {
+        color: white;
+        font-size: 4rem;
+      }
+
+      p {
+        color: white;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      #guessInput {
+        padding: 20px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 4rem;
+      }
+
+      button {
+        background-color: white;
+        color: black;
+        font-size: 24px;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin: 4px 2px;
+        cursor: pointer;
+        border: none;
+        border-radius: 16px;
+      }
+
+      button:hover {
+        background-color: #f1f1f1;
+      }
+
+      #result {
+        color: white;
+        font-size: 24px;
+      }
+
+      #resetBtn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+
+      #correctAnswer {
+        color: white;
+        font-size: 3rem;
+      }
+
+      #prevPlays {
+        position: absolute;
+        top: 20vh;
+        left: 6vw;
+        width: 10%;
+        color: #fff;
+        font-size: 2rem;
+        font-weight: 700;
+        list-style-type: circle;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Number Guessing Game</h1>
+    <p>Guess a number between 1 and 100:</p>
+    <p id="attempts">Attempts remaining : 7</p>
+    <input type="number" id="guessInput" min="1" max="100" />
+    <button onclick="guess()">Submit Guess</button>
+    <p id="result"></p>
+    <p id="correctAnswer"></p>
+    <button id="resetBtn" onclick="resetGame()">Reset Game</button>
+    <ul id="prevPlays"></ul>
+  </body>
+  <script src="script.js"></script>
+</html>
